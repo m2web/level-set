@@ -10,6 +10,15 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
+# Ignore bundler config
+/.bundle
+
+# Ignore database.yaml
+/config/database.yml
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+*.log
+doc/
+

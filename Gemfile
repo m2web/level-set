@@ -5,7 +5,7 @@ gem 'rails', '3.2.0.rc2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
 
 #these get rid of the execjs error upon server startup
 gem 'execjs'
@@ -22,6 +22,27 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development do
+	#gem 'sqlite3'
+	gem "pg"
+	gem 'rspec-rails'
+	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+end
+
+group :test do
+  # Pretty printed test output
+  #gem 'turn', '0.8.2', :require => false
+	#gem 'sqlite3'
+	gem "pg"
+	gem 'rspec'
+	gem 'webrat'
+end
+
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
