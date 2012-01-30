@@ -5,10 +5,10 @@ This is the repo for the soon to come Level-Set demo.
 === Here is the plan to date.
 
 * Mark needs to figure out what is going on
-This will be a continual review of the existing Level-Set models, etc.
+	- This will be a continual review of the existing Level-Set models, etc.
 
 * Get started on a prototype that can be set in front of investors: http://levelset.herokuapp.com
-This will be produced in an iterative, agile fashion.
+	- This will be produced in an iterative, agile fashion.
 
 * Morph the prototype into an actual, functioning application
-This again will be done in an iterative methodology either by Mark but more than likely a team to decrease time to market.
+	- This again will be done in an iterative methodology either by Mark but more than likely a team to decrease time to market.
