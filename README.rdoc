@@ -1,6 +1,6 @@
-http://levelset.herokuapp.com/assets/levelsetLogoSmall.jpg == Welcome to the Level-Set Code Repository
+== Welcome to the Level-Set Code Repository
 
-This is the repo for the soon to come Level-Set demo.
+This is the repo for the soon to come Level-Set demo. http://levelset.herokuapp.com/assets/levelsetLogoSmall.jpg
 
 === Here is the plan to date.
 
