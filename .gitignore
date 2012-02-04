@@ -21,4 +21,5 @@
 /tmp
 *.log
 doc/
+*.swp
 
