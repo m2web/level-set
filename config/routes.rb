@@ -1,5 +1,14 @@
 Levelset::Application.routes.draw do
-  # The priority is based upon order of creation:
+	
+	root :to => "pages#index"	
+
+	resources :users
+		match '/signup', :to => 'users#signup'
+
+	#this is needed for redirect_to pages_url
+	match 'pages' => 'pages#index'
+
+	# The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
