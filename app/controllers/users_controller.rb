@@ -44,10 +44,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-				format.html{ redirect_to pages_url, :notice => "You are now signed up!" }
-
-        #format.html { redirect_to @user, notice: 'User was successfully created.' }
-        #format.json { render json: @user, status: :created, location: @user }
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -89,6 +87,18 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # signup.html.erb
       format.json { render json: @user }
+    end
+	end
+
+	def createSignupUser
+		@user = User.new(params[:user])
+
+		respond_to do |format|
+    	if @user.save
+				format.html{ redirect_to pages_url, :notice => "You are now signed up!" }
+      else
+      	format.html{ redirect_to pages_url, :notice => "There was an error" }
+			end
     end
 	end
 

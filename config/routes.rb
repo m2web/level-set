@@ -1,12 +1,15 @@
 Levelset::Application.routes.draw do
 	
-	root :to => "pages#index"	
+	root :to => 'pages#index'
 
 	resources :users
 		match '/signup', :to => 'users#signup'
 
 	#this is needed for redirect_to pages_url
 	match 'pages' => 'pages#index'
+
+	#this is needed for createUser_url used in the signup.html.erb
+	match 'createUser' => 'users#createSignupUser'
 
 	# The priority is based upon order of creation:
   # first created -> highest priority.
