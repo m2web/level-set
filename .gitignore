@@ -22,4 +22,5 @@
 *.log
 doc/
 *.swp
+*.swo
 
