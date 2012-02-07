@@ -11,6 +11,7 @@ gem 'rails', '3.2.0.rc2'
 gem 'execjs'
 gem 'therubyracer'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'gravatar_image_tag'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,6 +38,7 @@ group :test do
 	gem "pg"
 	gem 'rspec'
 	gem 'webrat'
+	gem "factory_girl_rails", "~> 1.6.0"
 end
 
 group :production do
