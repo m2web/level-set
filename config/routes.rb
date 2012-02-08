@@ -2,6 +2,15 @@ Levelset::Application.routes.draw do
 	
 	root :to => 'pages#index'
 
+	resources :sessions
+		match '/login', :to => 'sessions#new'	
+
+	#get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
 	resources :users
 		match '/signup', :to => 'users#signup'
 
