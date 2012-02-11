@@ -10,7 +10,8 @@ gem 'rails', '3.2.0.rc2'
 #will also need to update the setting:
 #config.assets.compile = true in the config/environments/production.rb file
 #**********************
-#NOTE: Make sure you change the above back before push to heroku
+#NOTE: Make sure you change the above back and run bundle install
+#before push to heroku
 #**********************
 #gem 'sqlite3'
 
