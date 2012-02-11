@@ -20,6 +20,9 @@ Levelset::Application.routes.draw do
 	#this is needed for createUser_url used in the signup.html.erb
 	match 'createUser' => 'users#createSignupUser'
 
+	#this is the page for testing the user
+	match 'startTest' => 'users#testquestion'
+
 	# The priority is based upon order of creation:
   # first created -> highest priority.
 

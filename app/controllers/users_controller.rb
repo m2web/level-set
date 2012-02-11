@@ -95,10 +95,17 @@ class UsersController < ApplicationController
 
 		respond_to do |format|
     	if @user.save
-				format.html{ redirect_to pages_url, :notice => "You are now signed up!" }
+				format.html{ redirect_to startTest_url, :notice => "You are now signed up!" }
       else
       	format.html{ redirect_to pages_url, :notice => "There was an error" }
 			end
+    end
+	end
+
+	def testquestion
+		 respond_to do |format|
+      format.html # testquestion.html.erb
+      #format.json { render json: @user }
     end
 	end
 

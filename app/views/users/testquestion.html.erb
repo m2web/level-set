@@ -1,0 +1,29 @@
+<style type="text/css" media="screen">
+#page {
+       	background-color: #f0f0f0;
+        width: 750px;
+        margin-top: 100px;
+        margin-left: auto;
+				margin-right: auto;
+				padding: 25px;
+			}
+table, th, td
+{
+	border: 0px;
+	width: 500px;
+}
+</style>
+
+<div id="page">
+<h3>My ideal Sunday afternoon looks more like:</h3>
+<br />
+
+<table border="0">
+	<tr>
+		<td><%= radio_button_tag 'question1', 'walk' %> Taking a walk in the park.</td><td>Reading the newspaper <%= radio_button_tag 'question1', 'reading' %></td>
+	</tr>
+	<tr>
+		<td colspan="2"><%= submit_tag "Next >" %></td>
+</table>
+</div>
+</div
