@@ -5,11 +5,11 @@ gem 'rails', '3.2.0.rc2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#the sqlite3 gem will need to be enabled for:
-#rake assets:precompile --trace RAILS_ENV=production
-#will also need to update the setting:
+#the sqlite3 gem will need to be enabled and
 #config.assets.compile = true in the config/environments/production.rb file
-#**********************
+#for:
+#rake assets:precompile --trace RAILS_ENV=production
+##**********************
 #NOTE: Make sure you change the above back and run bundle install
 #before push to heroku
 #**********************
