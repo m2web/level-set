@@ -2,33 +2,23 @@
 <html>
   <head>
     <title>Level-Set</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
-
-      h1 {
+		<style type="text/css" media="screen">
+			
+			h1 {
         font-size: 28px;
         color: #000;
       }
 
       a  {color: #03c}
       a:hover {
-        background-color: #03c;
+        background-color: #000;
         color: white;
         text-decoration: none;
       }
 
-
       #page {
         background-color: #f0f0f0;
-        width: 750px;
+        width: 850px;
         margin: 0;
         margin-left: auto;
         margin-right: auto;
@@ -45,18 +35,13 @@
 
       #sidebar {
         float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
+        width: 275px;
       }
 
       #header, #about, #getting-started {
         padding-left: 75px;
         padding-right: 30px;
       }
-
 
       #header {
         background-image: url("assets/levelsetLogoSmall.jpg");
@@ -65,12 +50,12 @@
         height: 64px;
       }
       #header h1, #header h2 {margin: 0}
-      #header h2 {
+			
+			#header h2 {
         color: #888;
         font-weight: normal;
         font-size: 16px;
       }
-
 
       #about h3 {
         margin: 0;
@@ -84,19 +69,23 @@
         margin-left: -55px;
         margin-right: -10px;
       }
-      #about-content table {
+			
+			#about-content table {
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 11px;
         border-collapse: collapse;
       }
-      #about-content td {
+			
+			#about-content td {
         padding: 10px;
         padding-top: 3px;
         padding-bottom: 3px;
       }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
+			
+			#about-content td.name  {color: #555}
+			
+			#about-content td.value {color: #000}
 
       #about-content ul {
         padding: 0;
@@ -107,63 +96,71 @@
         background-color: #fcc;
         border: 1px solid #f00;
       }
-      #about-content.failure p {
+			
+			#about-content.failure p {
         margin: 0;
         padding: 10px;
       }
-
 
       #getting-started {
         border-top: 1px solid #ccc;
         margin-top: 25px;
         padding-top: 15px;
       }
-      #getting-started h1 {
+
+			#getting-started h1 {
         margin: 0;
         font-size: 20px;
       }
-      #getting-started h2 {
+			
+			#getting-started h2 {
         margin: 0;
         font-size: 14px;
         font-weight: normal;
         color: #333;
         margin-bottom: 25px;
       }
-      #getting-started ol {
+			
+			#getting-started ol {
         margin-left: 0;
         padding-left: 0;
       }
-      #getting-started li {
+			
+			#getting-started li {
         font-size: 18px;
         color: #888;
         margin-bottom: 25px;
       }
-      #getting-started li h2 {
+			
+			#getting-started li h2 {
         margin: 0;
         font-weight: normal;
         font-size: 18px;
         color: #333;
       }
-      #getting-started li p {
+			
+			#getting-started li p {
         color: #555;
         font-size: 13px;
       }
-
 
       #sidebar ul {
         margin-left: 0;
         padding-left: 0;
       }
-      #sidebar ul h3 {
-        margin-top: 25px;
+			
+			#sidebar ul h3 {
+        margin-top: 25px; 
         font-size: 16px;
         padding-bottom: 10px;
         border-bottom: 1px solid #ccc;
       }
-      #sidebar li {
+			
+			#sidebar li {
         list-style-type: none;
       }
-      #sidebar ul.links li {
+			
+			#sidebar ul.links li {
         margin-bottom: 5px;
       }
 
@@ -183,17 +180,31 @@
         info.innerHTML = xhr.responseText;
         info.style.display = 'block'
       }
-    </script>
+		</script>
+
   </head>
-  <body>
-    <div id="page">
+	<body>
+		  <div id="page">
       <div id="sidebar">
-        <ul id="sidebar-items">
+        <ul>
           <li>
-            <h3>Stuff You Can Do</h3>
+            <h2>Stuff You Can Do</h2>
 						<ul class="links">							
-							<li>Login with you're existing account <a href="/login">here</a>.</li>
+							<li>Login with you're existing account:</li>
+
+						  <%= form_tag sessions_path do %>
+								<div class="field">
+									<%= label_tag :email %>
+									<%= text_field_tag :email, params[:email] %>
+								</div>
+								<div class="field">
+									<%= label_tag :password %>
+								<%= password_field_tag :password %>
+								</div>
+								<div class="actions"><%= submit_tag "Log in" %></div>
+							<% end %>
 							<li>If you do not have an account, we have a new user signup <a href="/signup">here</a>.</li>
+
             </ul>
           </li>
         </ul>
@@ -205,9 +216,8 @@
 					<br />
           <h2>You&rsquo;re riding Ruby on Rails for the new Level-Set prototype!</h2>
 				</div>
-
+				<br />
 				<h2 id="notice"><%= notice %></h2>
-
         <div id="getting-started">
           <h1>Getting started</h1>
           <h2>Here&rsquo;s the plan (at least at the present :-) ):</h2>
@@ -232,6 +242,6 @@
       </div>
 
       <div id="footer">&nbsp;</div>
-    </div>
+		</div>
   </body>
 </html>

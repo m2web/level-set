@@ -1,3 +1,13 @@
+* { margin: 0; padding: 0; }
+	
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+		
+#page-wrap { 
+	position: relative; 
+}
+
 body {
   background-color: #fff;
   color: #333;
