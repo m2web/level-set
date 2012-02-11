@@ -5,6 +5,10 @@ gem 'rails', '3.2.0.rc2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+#the sqlite3 gem will need to be enabled for:
+#rake assets:precompile --trace RAILS_ENV=production
+#will also need to update the setting:
+#config.assets.compile = true in the config/environments/production.rb file
 #gem 'sqlite3'
 
 #these get rid of the execjs error upon server startup
