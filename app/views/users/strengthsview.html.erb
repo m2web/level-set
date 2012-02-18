@@ -12,18 +12,22 @@ table, th, td
 	border: 0px;
 	width: 500px;
 }
+
 </style>
 
 <div id="page">
-<h3>My ideal Sunday afternoon looks more like:</h3>
-<br />
-
+	<h2>We have your strengths ready to review</h2>
+	<h3>You will see the full descriptions on your profile page</h3>
+	<br />
+	<h1>Ideator</h1>
+	<h2>Adaptability</h2>
+	<h3>Strategic</h3>
+	<h4>Connectedness</h4>
+	<h5>Empathy</h5>
+	<hr>
 <table border="0">
 	<tr>
-		<td><%= radio_button_tag 'question1', 'walk' %> Taking a walk in the park.</td><td>Reading the newspaper <%= radio_button_tag 'question1', 'reading' %></td>
+		<td id="buttonRow"><%= button_to('Next', bitMoreInfo_url )%></td>
 	</tr>
-	<tr>
-		<td colspan="2" id="buttonRow"><%= button_to('Next',  strengthsView_url )%></td> 
 </table>
-</div>
 </div

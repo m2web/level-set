@@ -109,6 +109,21 @@ class UsersController < ApplicationController
     end
 	end
 
+	def strengthsview
+		 respond_to do |format|
+      format.html # strengthsview.html.erb
+      #format.json { render json: @user }
+    end
+	end
+
+	def bitmoreinfo
+		 respond_to do |format|
+      format.html # bitmoreinfo.html.erb
+      #format.json { render json: @user }
+    end
+	end
+
+
 end
 
 
