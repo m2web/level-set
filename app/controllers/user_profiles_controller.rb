@@ -5,8 +5,7 @@ class UserProfilesController < ApplicationController
 		@user_profile.want_to = params[:whatYouWant]		
 
 		if @user_profile.update_attributes(params[:user_profile])
-			render "users/showmatches"
-			#redirect_to showMatches_url
+			redirect_to showMatches_url
 		else
 			#TODO: handle error
 			redirect_to pages_url

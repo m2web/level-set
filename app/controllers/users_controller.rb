@@ -134,13 +134,6 @@ class UsersController < ApplicationController
 			render "sessions/new"
 		end
 	end
-
-	def showmatches
-		respond_to do |format|
-			format.html # showmatches.html.erb
-			#format.json { render json: @user }
-		end
-	end
 end
 
 
