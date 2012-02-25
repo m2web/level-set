@@ -7,12 +7,14 @@ Levelset::Application.routes.draw do
 
 	#get "sessions/new"
 
-  get "sessions/create"
+	get "sessions/create"
 
-  get "sessions/destroy"
+	get "sessions/destroy"
 
 	resources :users
 		match '/signup', :to => 'users#signup'
+
+	resources :user_profiles
 
 	#this is needed for redirect_to pages_url
 	match 'pages' => 'pages#index'
@@ -28,6 +30,9 @@ Levelset::Application.routes.draw do
 
 	#this is the bitMoreInfo_url for viewing of the bit more info view
 	match 'bitMoreInfo' => 'users#bitmoreinfo'
+
+	#this is the showMatches_url for viewing of the matches
+	match 'showMatches' => 'users#showmatches'
 
 	# The priority is based upon order of creation:
   # first created -> highest priority.

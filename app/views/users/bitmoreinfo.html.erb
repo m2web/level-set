@@ -20,14 +20,16 @@ table, th, td
 </head><body>
 <div id="page">
 <h2>Just a bit more info...</h2>
+<%= debug @user_profile %>
+<%= form_for(@user_profile) do |f| %>
 <table style="width: 100%; height: 203px;">
   <tbody>
     <tr>
-			<td style="vertical-align: top;">What do you want to do?<br>
-				<%= radio_button_tag 'whatYouWant', 'startSomething' %> Start something new<br>
-      	<%= radio_button_tag 'whatYouWant', 'joinClub' %> Join a club<br>
-      	<%= radio_button_tag 'whatYouWant', 'findMentor' %> Find a mentor<br>
-      	<%= radio_button_tag 'whatYouWant', 'findJob' %> Find a job<br>
+	<td style="vertical-align: top;">What do you want to do?<br>
+		<%= radio_button_tag 'whatYouWant', 'startSomething' %> Start something new<br>
+		<%= radio_button_tag 'whatYouWant', 'joinClub' %> Join a club<br>
+		<%= radio_button_tag 'whatYouWant', 'findMentor' %> Find a mentor<br>
+		<%= radio_button_tag 'whatYouWant', 'findJob' %> Find a job<br>
       </td>
       <td style="vertical-align: top;">What should someone know about
 				you?<br>
@@ -35,10 +37,11 @@ table, th, td
       </td>
     </tr>
     <tr>
-      <td colspan="2" id="buttonRow"><%= button_to('Next', bitMoreInfo_url )%></td>
+      <td colspan="2" id="buttonRow"><%= f.submit 'Next' %><%= button_to('Next', showMatches_url )%></td>
     </tr>
   </tbody>
 </table>
+<% end %>
 </div>
 
 </body></html>

@@ -103,27 +103,44 @@ class UsersController < ApplicationController
 	end
 
 	def testquestion
-		 respond_to do |format|
-      format.html # testquestion.html.erb
-      #format.json { render json: @user }
-    end
+		respond_to do |format|
+			format.html # testquestion.html.erb
+			#format.json { render json: @user }
+		end
 	end
 
 	def strengthsview
-		 respond_to do |format|
-      format.html # strengthsview.html.erb
-      #format.json { render json: @user }
-    end
+		respond_to do |format|
+			format.html # strengthsview.html.erb
+			#format.json { render json: @user }
+		end
 	end
 
 	def bitmoreinfo
-		 respond_to do |format|
-      format.html # bitmoreinfo.html.erb
-      #format.json { render json: @user }
-    end
+		if session[:user_id] #make sure logged in.	
+			if UserProfile.find_by_user_id(session[:user_id])
+				@user_profile = UserProfile.find_by_user_id(session[:user_id])
+				respond_to do |format|
+					format.html # bitmoreinfo.html.erb
+					#format.json { render json: @user }
+				end
+			else 
+				#there is not a profile so create it
+				@user_profile = UserProfile.create(:user_id => session[:user_id],:about_me => '', :want_to => '')
+			end
+			
+		else
+			flash.now.alert = "You need to login."
+			render "sessions/new"
+		end
 	end
 
-
+	def showmatches
+		respond_to do |format|
+			format.html # showmatches.html.erb
+			#format.json { render json: @user }
+		end
+	end
 end
 
 
