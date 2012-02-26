@@ -34,6 +34,9 @@ Levelset::Application.routes.draw do
 	#this is the showMatches_url for viewing of the matches
 	match 'showMatches' => 'users#showmatches'
 
+	#this is the showProfile_url for viewing of the matches
+	match 'showProfile' => 'users#showprofile'
+
 	# The priority is based upon order of creation:
   # first created -> highest priority.
 

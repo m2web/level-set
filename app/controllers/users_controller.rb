@@ -134,6 +134,19 @@ class UsersController < ApplicationController
 			render "sessions/new"
 		end
 	end
+
+	def showprofile
+		if session[:user_id] #make sure logged in.
+			@user = User.find(session[:user_id])
+			#TODO: translate the the want_to to phrase
+			respond_to do |format|
+				format.html # showprofile.html.erb
+				#format.json { render json: @user }
+			end
+
+		else
+		end
+	end
 end
 
 

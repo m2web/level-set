@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  
+  <style type="text/css" media="screen">
+#page {
+       	background-color: #f0f0f0;
+        width: 700px;
+        margin-top: 100px;
+        margin-left: auto;
+				margin-right: auto;
+				padding: 25px;
+			}
+table, th, td
+{
+	border: 0px;
+	width: 500px;
+}
+
+  </style>
+</head><body>
+<div id="page">
+<%=@user.first_name%> <%=@user.last_name%> is a member since 2012.
+<br />
+<%=@user.first_name%> is here to <%=@user.user_profile.want_to %>
+<br /><br />
+<%=@user.user_profile.about_me %>
+</div>
+
+</body></html>
