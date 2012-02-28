@@ -21,7 +21,7 @@ table, th, td
 <div id="page">
 <%=@user.first_name%> <%=@user.last_name%> is a member since 2012.
 <br />
-<%= gravatar_image_tag @user.email %>
+<%= gravatar_for @user, :size => 100 %>
 <br />
 <%=@user.first_name%> is here to <%=@user.user_profile.want_to %>
 <br /><br />
