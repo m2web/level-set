@@ -13,11 +13,13 @@
 
 class User < ActiveRecord::Base
 	has_one :user_profile
+	attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+
 	validates :first_name, 	:presence => true, :length => { :minimum => 2, :maximum => 35 } 
 	validates :last_name, 	:presence => true, :length => { :minimum => 2, :maximum => 50 }
 	validates :email, 			:presence => true, :format => { :with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, 
 		uniqueness: { case_sensitive: false }
-
+	validates :password, :length => { :minimum => 6, :maximum => 35 }
 	has_secure_password
 	validates_presence_of :password, :on => :create
 end
