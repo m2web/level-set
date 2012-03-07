@@ -103,10 +103,17 @@ class UsersController < ApplicationController
 	end
 
 	def testquestion
-		respond_to do |format|
-			format.html # testquestion.html.erb
-			#format.json { render json: @user }
+		if session[:user_id] #make sure logged in.
+			@user = User.find(session[:user_id])
+			respond_to do |format|
+				format.html # testquestion.html.erb
+				#format.json { render json: @user }
+			end
+		else
+			flash.now.alert = "You need to login."
+			render "sessions/new"
 		end
+
 	end
 
 	def strengthsview
@@ -138,13 +145,13 @@ class UsersController < ApplicationController
 	def showprofile
 		if session[:user_id] #make sure logged in.
 			@user = User.find(session[:user_id])
-			#TODO: translate the the want_to to phrase
 			respond_to do |format|
 				format.html # showprofile.html.erb
 				#format.json { render json: @user }
 			end
-
 		else
+			flash.now.alert = "You need to login."
+			render "sessions/new"
 		end
 	end
 end
