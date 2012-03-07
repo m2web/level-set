@@ -37,6 +37,9 @@ Levelset::Application.routes.draw do
 	#this is the showProfile_url for viewing of the matches
 	match 'showProfile' => 'users#showprofile'
 
+	#this is the showProfile_url for viewing of the matches
+	match 'logout' => 'sessions#destroy'
+
 	# The priority is based upon order of creation:
   # first created -> highest priority.
 
