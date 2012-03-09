@@ -5,17 +5,15 @@ Levelset::Application.routes.draw do
 	resources :sessions
 		match '/login', :to => 'sessions#new'	
 
-	#get "sessions/new"
-
 	get "sessions/create"
 
 	get "sessions/destroy"
 
-	resources :users
-	
-	match 'signup' => 'users#signup'
+	resources :users	
  
 	resources :user_profiles
+
+	match 'signup' => 'users#signup'
 
 	#this is needed for redirect_to pages_url
 	match 'pages' => 'pages#index'
