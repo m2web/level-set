@@ -97,8 +97,9 @@ class UsersController < ApplicationController
     	if @user.save
 				session[:user_id] = @user.id
 				format.html{ redirect_to startTest_url, :notice => "You are now signed up!" }
-      else #TODO: setup so a redirect back to the signup with errors
-      	format.html{ redirect_to pages_url, :notice => "There was an error" }
+      else 
+				format.html { render action: "signup" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
 			end
     end
 	end

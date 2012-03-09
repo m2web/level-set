@@ -12,8 +12,9 @@ Levelset::Application.routes.draw do
 	get "sessions/destroy"
 
 	resources :users
-		match '/signup', :to => 'users#signup'
-
+	
+	match 'signup' => 'users#signup'
+ 
 	resources :user_profiles
 
 	#this is needed for redirect_to pages_url
@@ -37,7 +38,7 @@ Levelset::Application.routes.draw do
 	#this is the showProfile_url for viewing of the matches
 	match 'showProfile' => 'users#showprofile'
 
-	#this is the showProfile_url for viewing of the matches
+	#this is the logout_url
 	match 'logout' => 'sessions#destroy'
 
 	# The priority is based upon order of creation:
