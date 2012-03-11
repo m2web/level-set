@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+	http_basic_authenticate_with :name => APP_CONFIG['username'], :password => APP_CONFIG['password'], 
+		:only => [:index, :show, :new, :edit, :create, :update]
   def index
     @users = User.all
 
@@ -148,6 +150,9 @@ class UsersController < ApplicationController
 			flash.now.alert = "You need to login."
 			render "sessions/new"
 		end
+	end
+
+	def showmatches
 	end
 
 	def showprofile
