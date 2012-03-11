@@ -15,6 +15,8 @@
 
 # Ignore database.yaml
 /config/database.yml
+# Ignore config file
+/config/app_config.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
