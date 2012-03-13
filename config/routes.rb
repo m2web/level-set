@@ -21,8 +21,11 @@ Levelset::Application.routes.draw do
 	#this is needed for createUser_url used in the signup.html.erb
 	match 'createUser' => 'users#createSignupUser'
 
-	#this is the startTest_url for testing the user
-	match 'startTest' => 'users#testquestion'
+	#this is the startTest_url for testing the user. This loads the array of questions
+	match 'startTest' => 'users#starttest'
+
+	#this is the actual test question view for the questions
+	match 'testQuestion' => 'users#testquestion'
 
 	#this is the strengthsView_url for viewing the strengths
 	match 'strengthsView' => 'users#strengthsview'

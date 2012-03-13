@@ -106,20 +106,53 @@ class UsersController < ApplicationController
     end
 	end
 
-	def testquestion
-		#TODO: refactor this and the bitmoreinfo action into private action as there is repeated code
+#TODO:refactor this and the bitmoreinfo action into private action as there is repeated code
+	def starttest
 		if session[:user_id] #make sure logged in.	
 			if UserProfile.find_by_user_id(session[:user_id])
 				@user_profile = UserProfile.find_by_user_id(session[:user_id])
-				respond_to do |format|
-					format.html # testquestion.html.erb
-					#format.json { render json: @user }
-				end
 			else 
 				#there is not a profile so create it
 				@user_profile = UserProfile.create(:user_id => session[:user_id],:about_me => '', :want_to => '')
 			end
-			
+
+			session[:questionNumber] = 1
+			session[:qAndA] = { 
+				1 => ["sky_blue", "Why is the sky blue?", "Because", "Light refraction"], 
+				2 => ["mean_life", "What is the meaning of life?", "No one knows","To glorify God and enjoy Him forever."],
+				3 => ["van_gas", "Do this vans get good gas milage?", "I don't know kid beat it!", "Yes"]
+			}
+
+			render "testquestion"
+		else
+			flash.now.alert = "You need to login."
+			render "sessions/new"
+		end
+	end
+
+	def testquestion
+		if session[:user_id] #make sure logged in.	
+			if UserProfile.find_by_user_id(session[:user_id])
+				@user_profile = UserProfile.find_by_user_id(session[:user_id])
+			else 
+				#there is not a profile so create it
+				@user_profile = UserProfile.create(:user_id => session[:user_id],:about_me => '', :want_to => '')
+			end
+
+			#respond_to do |format|
+			#	format.html # testquestion.html.erb
+			#	#format.json { render json: @user }
+			#end
+
+			if session[:questionNumber].to_i <= 2 # since we are adding after the check
+				session[:questionNumber] = session[:questionNumber] + 1
+				#redirect_to testQuestion_url
+				render "testquestion"
+			else
+				session[:questionNumber] = 0
+				session[:qAndA] = nil
+				render "strengthsview"
+			end
 		else
 			flash.now.alert = "You need to login."
 			render "sessions/new"

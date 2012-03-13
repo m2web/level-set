@@ -15,15 +15,18 @@ table, th, td
 </style>
 
 <div id="page">
-<h3>My ideal Sunday afternoon looks more like:</h3>
+<% if session[:qAndA][session[:questionNumber]] %>
+<h3><%= session[:qAndA][session[:questionNumber]][1] %></h3>
 <br />
-
-<table border="0">
-	<tr>
-		<td><%= radio_button_tag 'question1', 'walk' %> Taking a walk in the park.</td><td>Reading the newspaper <%= radio_button_tag 'question1', 'reading' %></td>
-	</tr>
-	<tr>
-		<td colspan="2" id="buttonRow"><%= button_to('Next',  strengthsView_url )%></td> 
-</table>
+	<table border="0">
+		<tr>
+			<td><%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '1' %> <%= session[:qAndA][session[:questionNumber]][2] %></td><td><%= session[:qAndA][session[:questionNumber]][3] %> <%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '2' %></td>
+		</tr>
+		<tr>
+			<td colspan="2" id="buttonRow"><%= button_to('Next',  testQuestion_url )%></td> 
+	</table>
+<% else %>
+	<h3>There was a problem with the test. Please try again later.</h3>
+<% end %>
 </div>
 </div
