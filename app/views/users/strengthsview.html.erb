@@ -1,21 +1,20 @@
 <style type="text/css" media="screen">
-#page {
+#thisPage {
        	background-color: #f0f0f0;
         width: 500px;
-        margin-top: 250px;
+        margin-top: 100px;
         margin-left: auto;
 				margin-right: auto;
 				padding: 25px;
 			}
-table, th, td
-{
-	border: 0px;
-	width: 500px;
-}
-
 </style>
+<div id="wrapper">
+<%= render 'layouts/logo' %>
+<hr />
+<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
 
-<div id="page">
+<div id="thisPage">
 	<h2>We have your strengths ready to review</h2>
 	<h3>You will see the full descriptions on your profile page</h3>
 	<br />
@@ -25,9 +24,10 @@ table, th, td
 	<h4>Connectedness</h4>
 	<h5>Empathy</h5>
 	<hr>
-<table border="0">
+<table border="0" width="500px">
 	<tr>
 		<td id="buttonRow"><%= button_to('Next', bitMoreInfo_url )%></td>
 	</tr>
 </table>
-</div
+</div>
+<%= render 'layouts/footer' %>

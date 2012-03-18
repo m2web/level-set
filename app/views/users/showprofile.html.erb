@@ -2,30 +2,30 @@
 <html><head>
   
   <style type="text/css" media="screen">
-#page {
+#thisPage {
        	background-color: #f0f0f0;
         width: 700px;
-        margin-top: 250px;
+        margin-top: 100px;
         margin-left: auto;
 				margin-right: auto;
 				padding: 25px;
 			}
-table, th, td
-{
-	border: 0px;
-	width: 500px;
-}
+	</style>
+	</head><body>
+	<div id="wrapper">
+		<%= render 'layouts/logo' %>
+		<hr />
+		<%= render 'layouts/menu' %>
+	</div><!-- end #wrapper -->
 
-  </style>
-</head><body>
-<div id="page">
-<%=@user.first_name%> <%=@user.last_name%> is a member since 2012.
-<br />
-<%= gravatar_for @user, :size => 100 %>
-<br />
-<%=@user.first_name%> is here to <%=@user.user_profile.want_to %>
-<br /><br />
-<%=@user.user_profile.about_me %>
+<div id="thisPage">
+	<H2><%=@user.first_name%> <%=@user.last_name%> is a member since 2012.</h2>
+	<br />
+	<%= gravatar_for @user, :size => 100 %>
+	<br />
+	<h2><%=@user.first_name%> is here to <%=@user.user_profile.want_to %></h2>
+	<br /><br />
+	<h2><%=@user.user_profile.about_me %></h2>
 </div>
-
+<%= render 'layouts/footer' %>
 </body></html>

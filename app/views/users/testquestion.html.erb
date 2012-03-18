@@ -1,24 +1,25 @@
 <style type="text/css" media="screen">
-#page {
+#thisPage {
        	background-color: #f0f0f0;
         width: 600px;
-        margin-top: 250px;
+        margin-top: 100px;
         margin-left: auto;
 				margin-right: auto;
 				padding: 25px;
 			}
-table, th, td
-{
-	border: 0px;
-	width: 600px;
-}
-</style>
 
-<div id="page">
+</style>
+<div id="wrapper">
+<%= render 'layouts/logo' %>
+<hr />
+<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
+
+<div id="thisPage">
 <% if session[:qAndA][session[:questionNumber]] %>
 <h3><%= session[:qAndA][session[:questionNumber]][1] %></h3>
 <br />
-	<table border="0">
+	<table border="0" width="600">
 		<tr>
 			<td><%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '1' %> <%= session[:qAndA][session[:questionNumber]][2] %></td><td><%= session[:qAndA][session[:questionNumber]][3] %> <%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '2' %></td>
 		</tr>
@@ -29,4 +30,4 @@ table, th, td
 	<h3>There was a problem with the test. Please try again later.</h3>
 <% end %>
 </div>
-</div
+<%= render 'layouts/footer' %>

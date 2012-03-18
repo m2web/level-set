@@ -75,6 +75,10 @@ hr { display: none; }
 #wrapper {
 }
 
+td#buttonRow{
+	text-align:right;
+}
+
 /* Header */
 
 #header-wrapper {

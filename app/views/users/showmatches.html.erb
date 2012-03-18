@@ -2,28 +2,29 @@
 <html><head>
   
   <style type="text/css" media="screen">
-#page {
+#thisPage {
        	background-color: #f0f0f0;
         width: 700px;
-        margin-top: 250px;
+        margin-top: 100px;
         margin-left: auto;
 				margin-right: auto;
 				padding: 25px;
 			}
-table, th, td
-{
-	border: 0px;
-	width: 500px;
-}
-
+			
 .matchName {
 	font-weight: bold;
 	font-size:1.5em;
 }
 
   </style>
-</head><body>
-<div id="page">
+	</head><body>
+	<div id="wrapper">
+		<%= render 'layouts/logo' %>
+		<hr />
+		<%= render 'layouts/menu' %>
+	</div><!-- end #wrapper -->
+
+<div id="thisPage">
 <h2>We have some matches</h2>
 <h3>These folks have strengths that compliment yours</h3>
 
@@ -51,5 +52,5 @@ table, th, td
   </tbody>
 </table>
 </div>
-
+<%= render 'layouts/footer' %>
 </body></html>
