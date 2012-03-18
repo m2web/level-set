@@ -38,6 +38,21 @@ blockquote { }
 
 a { color: #77B003; }
 
+a#logout { 
+	text-decoration: none;
+	text-align: center;
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 7px 0 0 0;
+	display: block;
+	float: right;
+	height: 30px;
+	margin: 0;
+}
+
 a:hover { text-decoration: none; }
 
 a img {
