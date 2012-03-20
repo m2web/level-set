@@ -1,5 +1,25 @@
+<style type="text/css" media="screen">
+#thisPage {
+       	background-color: #f0f0f0;
+        width: 600px;
+        margin-top: 100px;
+        margin-left: auto;
+				margin-right: auto;
+				padding: 25px;
+			}
+
+</style>
+<div id="wrapper">
+<%= render 'layouts/logo' %>
+<hr />
+<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
+
+<div id="thisPage">
+
 <h1>New user</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', users_path %>
+</div>
