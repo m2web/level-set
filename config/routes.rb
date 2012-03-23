@@ -13,6 +13,7 @@ Levelset::Application.routes.draw do
  
 	resources :user_profiles
 
+	#this is needed for signup_url
 	match 'signup' => 'users#signup'
 
 	#this is needed for redirect_to pages_url

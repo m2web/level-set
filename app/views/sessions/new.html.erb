@@ -29,7 +29,8 @@
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
+  <div class="actions"><%= submit_tag "Log in", :id => "login-submit"  %></div>
 <% end %>
+<%= button_to 'or Create a Profile', signup_url, :id => "create-profile-button" %>
 </div>
 <%= render 'layouts/footer' %>

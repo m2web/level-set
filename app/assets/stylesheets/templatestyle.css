@@ -197,6 +197,15 @@ td#buttonRow{
 	color: #FFFFFF;
 }
 
+#create-profile-button {
+	height: 21px;
+	margin-left: 10px;
+	margin-top: 5px;
+	padding: 0px 5px;
+	background: #5AA01B;
+	color: #FFFFFF;
+}
+
 /* Page */
 
 #page {

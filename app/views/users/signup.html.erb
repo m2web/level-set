@@ -8,9 +8,13 @@
 				padding: 25px;
 			}
 </style>
-
+<div id="wrapper">
+<%= render 'layouts/logo' %>
+<hr />
+<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
 <div id="page">
-<h3>Before we go any further, let's grab some of you info:</h3>
+<h3>Let's grab some of your info:</h3>
 <br />
 <%= form_for @user, :url => createUser_path do |f| %>
   <% if @user.errors.any? %>
@@ -51,3 +55,4 @@
   </div>
 <% end %>
 </div>
+<%= render 'layouts/footer' %>
