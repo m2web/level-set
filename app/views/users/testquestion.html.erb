@@ -21,7 +21,7 @@
 <br />
 	<table border="0" width="600">
 		<tr>
-			<td><%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '1' %> <%= session[:qAndA][session[:questionNumber]][2] %></td><td><%= session[:qAndA][session[:questionNumber]][3] %> <%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '2' %></td>
+			<td><%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '1', true %> <%= session[:qAndA][session[:questionNumber]][2] %></td><td><%= session[:qAndA][session[:questionNumber]][3] %> <%= radio_button_tag session[:qAndA][session[:questionNumber]][0], '2' %></td>
 		</tr>
 		<tr>
 			<td colspan="2" id="buttonRow"><%= button_to('Next',  testQuestion_url )%></td> 
