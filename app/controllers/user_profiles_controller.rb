@@ -7,8 +7,7 @@ class UserProfilesController < ApplicationController
 		if @user_profile.update_attributes(params[:user_profile])
 			redirect_to showMatches_url
 		else
-			#TODO: handle error
-			redirect_to pages_url
+			redirect_to  bitMoreInfo_url
 		end
 
 	end
