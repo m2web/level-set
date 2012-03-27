@@ -12,7 +12,8 @@
 #
 
 class User < ActiveRecord::Base
-	has_one :user_profile
+	has_one :user_profile, :dependent => :destroy
+
 	attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
 
 	validates :first_name, 	:presence => true, :length => { :minimum => 2, :maximum => 35 } 
