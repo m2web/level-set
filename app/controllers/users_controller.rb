@@ -192,18 +192,12 @@ class UsersController < ApplicationController
 	def showprofile
 		if session[:user_id] #make sure logged in.
 			@user = User.find(session[:user_id])
-			#set what the user wants to do
-			if @user.user_profile.want_to = "startSomething"
-				@user.user_profile.want_to = "start something new."
-			elsif @user.user_profile.want_to = "joinClub"
-				@user.user_profile.want_to = "join a club."
-			elsif @user.user_profile.want_to = "findMentor"
-				@user.user_profile.want_to = "find a mentor."
-			elsif @user.user_profile.want_to = "findJob"
-				@user.user_profile.want_to = "find a job."
-			else
-				@user.user_profile.want_to = "discover, share, and leverage your strengths."
-			end
+
+			want_toHash = { "startSomething" => "start something new.", "joinClub" => "join a club.", 
+				"findMentor" => "find a mentor.", "findJob" => "find a job." 
+			}
+				@user.user_profile.want_to = want_toHash[@user.user_profile.want_to]
+
 			respond_to do |format|
 				format.html # showprofile.html.erb
 				#format.json { render json: @user }
