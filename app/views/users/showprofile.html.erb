@@ -1,47 +1,97 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-  
-  <style type="text/css" media="screen">
-#thisPage {
-	background-color: #f0f0f0;
-	width: 700px;
-	margin-top: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 25px;
-}
-.largerText {
-	font-weight: bold;
-	font-size: 1.25em;
-}
-	</style>
-	</head><body>
-	<div id="wrapper">
-		<%= render 'layouts/logo' %>
-		<hr />
-		<%= render 'layouts/menu' %>
-	</div><!-- end #wrapper -->
+<style type="text/css" media="screen">
+	#thisPage {
+		background-color: #f0f0f0;
+		width: 800px;
+		margin-top: 100px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 25px;
+		overflow: hidden;
+	}
 
-	<div id="thisPage">
-		<div id="aboutMe">
-			<H2><%=@user.first_name%> <%=@user.last_name%> is a member since 2012.</h2>
-			<br />
-			<%= gravatar_for @user, :size => 100 %>
-			<br />
-			To add or update your image go to <a href="http://gravatar.com" target="_new">gravatar.com</a>
-			<br /><br />
-			<h2><%=@user.first_name%> is here to <%=@user.user_profile.want_to %></h2>
-			<h4><spam class="largerText">Ideator, Adaptbility,</spam><br />
-			Strategic, Connectedness, Empathy</h4>
-			<h4><%=@user.user_profile.about_me %></h4>
-		</div><!--end #aboutMe -->
+	.largerText {
+		font-weight: bold;
+		font-size: 1.25em;
+	}
+
+	#aboutMe {
+		float: left;
+		width: 350px;
+		margin: 0;
+		padding: 1em;
+	}
+
+	#podsNpeople {
+		margin-left: 400px;
+		padding: 1em;
+	}
+
+	#recentActivity {
+		border: 1px solid black;
+		padding: 10px;
+	}
+
+	td { 
+		font-size: 1.2em;
+		color: black;
+	}
+
+	.even { 
+		background-color:#FFF;
+	}
+	
+	.odd { 
+		background-color:#DEDEDE;
+	}
+
+	#peopleMayneedYou {
+		margin-left: 50px;
+	}
+</style>
+
+<div id="wrapper">
+	<%= render 'layouts/logo' %>
+	<hr />
+	<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
+
+<div id="thisPage">
+	<div id="aboutMe">
+		<H2><%=@user.first_name%> <%=@user.last_name%> is a member since 2012.</h2>
+		<br />
+		<%= gravatar_for @user, :size => 100 %>
+		<br />
+		To add or update your image go to <a href="http://gravatar.com" target="_new">gravatar.com</a>
+		<br /><br />
+		<h2><%=@user.first_name%> is here to <%=@user.user_profile.want_to %></h2>
+		<h4><spam class="largerText">Ideator, Adaptbility,</spam><br />
+		Strategic, Connectedness, Empathy</h4>
+		<h4><%=@user.user_profile.about_me %></h4>
 		<div id="recentActivity">
-			Recent Activity Here
-		</div>
-		<div id="podsNpeople">
-			Here is the pods and people graphic
-		</div>
-	</div><!-- end #thisPage -->
-</div>
+			<H2>Recent Activity Here</h2>
+			<table>
+				<% 
+					@items = ["Joined Gregg's Pod", "Discovered new strengths", "Achieved unverifiable levels of success!", "Joined Matt's Pod"]
+					@items.each do |item| 
+				%>
+				<tr class="<%= cycle("odd", "even") -%>">
+					<td><%= item %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div><!-- end #recentActivity -->
+	</div><!--end #aboutMe -->
+	<div id="podsNpeople">
+		<H3>Explore Pods that could use Your Strengths</h3>
+		<%= image_tag "/assets/pods.jpg", :size => "400x300", :alt => "Pods" %>
+		<br />
+		<br />
+		<H3>The people could benefit from your strengths</h3>
+		<div id="peopleMayneedYou">
+			<%= image_tag "/assets/VerticlePhotos.jpg", :size => "125x500", :alt => "People" %>
+		</div><!-- end #peopleMayneedYou -->
+	</div><!-- end #podsNpeople -->
+</div><!-- end #thisPage -->
+
 <%= render 'layouts/footer' %>
 </body></html>
