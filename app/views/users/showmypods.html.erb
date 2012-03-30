@@ -1,0 +1,87 @@
+<style type="text/css" media="screen">
+	#thisPage {
+		background-color: #f0f0f0;
+		width: 900px;
+		margin-top: 100px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 25px;
+		overflow: hidden;
+	}
+
+	.largerText {
+		font-weight: bold;
+		font-size: 1.25em;
+	}
+
+	#aboutMe {
+		float: left;
+		width: 350px;
+		margin: 0;
+		padding: 1em;
+	}
+
+	#myPods {
+		margin-left: 400px;
+		width: 500px;
+		padding: 1em;
+	}
+
+	#podNetwork {
+		border: 1px solid black;
+		padding: 10px;
+	}
+
+	td { 
+		font-size: 1.2em;
+		color: black;
+	}
+
+	.even { 
+		background-color:#FFF;
+	}
+	
+	.odd { 
+		background-color:#DEDEDE;
+	}
+
+	#peopleMayneedYou {
+		margin-left: 50px;
+	}
+</style>
+
+<div id="wrapper">
+	<%= render 'layouts/logo' %>
+	<hr />
+	<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
+
+<div id="thisPage">
+	<div id="aboutMe">
+		<H2><%=@user.first_name%> <%=@user.last_name%> is a member since 2012.</h2>
+		<br />
+		<%= gravatar_for @user, :size => 100 %>
+		<br />
+		To add or update your image go to <a href="http://gravatar.com" target="_new">gravatar.com</a>
+		<br /><br />
+		<div id="podNetwork">
+			<H2>Your Pod Network</h2>
+			<table>
+				<% 
+					@items = ["Marketing Team 2012", "CAKE Street Team", "Achieved unverifiable levels of success team"]
+					@items.each do |item| 
+				%>
+				<tr class="<%= cycle("odd", "even") -%>">
+					<td><%= item %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div><!-- end #podNetwork -->
+	</div><!--end #aboutMe -->
+	<div id="myPods">
+		<%= image_tag "/assets/PodsApp.gif", :size => "500x554", :alt => "Level-Set Pod App" %>
+	</div><!-- end #myPods -->
+</div><!-- end #thisPage -->
+
+<%= render 'layouts/footer' %>
+</body></html>

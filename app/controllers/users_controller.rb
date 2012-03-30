@@ -207,6 +207,22 @@ class UsersController < ApplicationController
 			render "sessions/new"
 		end
 	end
+
+	def showmypods
+		if session[:user_id] #make sure logged in.
+			@user = User.find(session[:user_id])
+			
+			respond_to do |format|
+				format.html # showmypods.html.erb
+				#format.json { render json: @user }
+			end
+		
+		else
+			flash.now.alert = "You need to login."
+			render "sessions/new"
+		end
+	end
+
 end
 
 

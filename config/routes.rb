@@ -43,6 +43,9 @@ Levelset::Application.routes.draw do
 	#this is the logout_url
 	match 'logout' => 'sessions#destroy'
 
+	#this is the showMyPods_url for viewing of the user's pods
+	match 'showMyPods' => 'users#showmypods'
+
 	# The priority is based upon order of creation:
   # first created -> highest priority.
 
