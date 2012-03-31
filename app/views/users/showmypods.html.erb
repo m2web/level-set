@@ -28,25 +28,41 @@
 	}
 
 	#podNetwork {
-		border: 1px solid black;
 		padding: 10px;
 	}
 
-	td { 
+	#podName { 
 		font-size: 1.2em;
 		color: black;
 	}
 
 	.even { 
 		background-color:#FFF;
+		padding: 5px;
+		height: 60px;
+		position: relative;
 	}
 	
 	.odd { 
 		background-color:#DEDEDE;
+		padding: 5px;
+		height: 60px;
+		position: relative;
 	}
 
-	#peopleMayneedYou {
-		margin-left: 50px;
+	#podImg {
+		float: left;
+		margin-right: 10px;
+	}
+
+	#podMembers {
+	}
+
+	#podExplore {
+		position: absolute; 
+		bottom: 2px;
+		right: 0;
+		padding: 5px;
 	}
 </style>
 
@@ -66,16 +82,17 @@
 		<br /><br />
 		<div id="podNetwork">
 			<H2>Your Pod Network</h2>
-			<table>
 				<% 
-					@items = ["Marketing Team 2012", "CAKE Street Team", "Achieved unverifiable levels of success team"]
-					@items.each do |item| 
+					@pods = [["/assets/LSMarketing-pod-img.gif", "Marketing Team 2012", "John, Matt, Tammy, Arnold"], ["/assets/Cake-pod-img.jpg", "CAKE Street Team", "Rual, Zeek, Matt, Kelsey"], ["/assets/quest-pod-img.jpg", "New Quest", "Chops, Chris, Matt"]]
+					@pods.each do |pic, name, members| 
 				%>
-				<tr class="<%= cycle("odd", "even") -%>">
-					<td><%= item %></td>
-				</tr>
+				<div class="<%= cycle("odd", "even") -%>">
+					<%= image_tag pic, :size => "54x58", :id => "podImg" %>
+					<span id="podName"><%= name %></span>
+					<div id="podMembers"><%= members %></div>
+					<div id="podExplore">explore</div>
+				</div>
 				<% end %>
-			</table>
 		</div><!-- end #podNetwork -->
 	</div><!--end #aboutMe -->
 	<div id="myPods">
