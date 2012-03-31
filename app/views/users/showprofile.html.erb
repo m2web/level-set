@@ -1,7 +1,7 @@
 <style type="text/css" media="screen">
 	#thisPage {
 		background-color: #f0f0f0;
-		width: 800px;
+		width: 900px;
 		margin-top: 100px;
 		margin-left: auto;
 		margin-right: auto;
@@ -22,26 +22,37 @@
 	}
 
 	#podsNpeople {
-		margin-left: 400px;
+		margin-left: 475px;
 		padding: 1em;
 	}
 
 	#recentActivity {
 		border: 1px solid black;
 		padding: 10px;
+		width: 400px;
 	}
 
-	td { 
+	#activity { 
 		font-size: 1.2em;
 		color: black;
 	}
 
+	#activityInfo {
+		margin-left: 50px;
+	}
+
 	.even { 
 		background-color:#FFF;
+		padding: 5px;
+		height: 45px;
+		position: relative;
 	}
 	
 	.odd { 
 		background-color:#DEDEDE;
+		padding: 5px;
+		height: 45px;
+		position: relative;
 	}
 
 	#peopleMayneedYou {
@@ -69,16 +80,15 @@
 		<h4><%=@user.user_profile.about_me %></h4>
 		<div id="recentActivity">
 			<H2>Recent Activity</h2>
-			<table>
 				<% 
-					@items = ["Joined Gregg's Pod", "Discovered new strengths", "Achieved unverifiable levels of success!", "Joined Matt's Pod"]
-					@items.each do |item| 
+					@activities = [["Arthur Doyle has invited you to join a Pod","We think you would be a great fit..."], ["Discovered new strengths","Empathy, Strategic..."], ["Joined Matt's Pod", "The result, unverifiable levels of success..."]]
+					@activities.each do |activity, info| 
 				%>
-				<tr class="<%= cycle("odd", "even") -%>">
-					<td><%= item %></td>
-				</tr>
+				<div class="<%= cycle("odd", "even") -%>">
+					<div id="activity"><%= activity %></div>
+					<div id="activityInfo"><%= info %> READ MORE </div>
+				</div><!-- end cycle -->
 				<% end %>
-			</table>
 		</div><!-- end #recentActivity -->
 	</div><!--end #aboutMe -->
 	<div id="podsNpeople">
