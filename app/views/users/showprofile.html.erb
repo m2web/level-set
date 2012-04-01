@@ -58,6 +58,30 @@
 	#peopleMayneedYou {
 		margin-left: 50px;
 	}
+
+/*
+start user pic and links
+*/
+			#userSection {
+				height: 100px;
+			}
+
+			#userPicture {
+				float: left;
+				width: 100px;
+			}
+
+			#userStuff {
+				margin-left: 125px;
+			}
+
+			#userStuffItem {
+				height: 20px;
+			}
+/*
+end user pic and links
+*/
+
 </style>
 
 <div id="wrapper">
@@ -70,7 +94,7 @@
 	<div id="aboutMe">
 		<H2><%=@user.first_name%> <%=@user.last_name%> is a member since 2012.</h2>
 		<br />
-		<%= gravatar_for @user, :size => 100 %>
+		<%= render 'layouts/userPicAndLinks' %>
 		<br />
 		To add or update your image go to <a href="http://gravatar.com" target="_new">gravatar.com</a>
 		<br /><br />
