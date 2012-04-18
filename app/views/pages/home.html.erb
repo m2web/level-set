@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+-->
+  
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Level Set</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<style type="text/css" media="screen">
+/* New look */
+	/* start left column */
+	#leftColumn {
+		float: left;
+		width: 655px;
+		margin: 0;
+		padding: 1em;
+		border-right:3px inset #055606;
+	}
+/* end left column */
+/* start right column */
+	#rightColumn {
+		margin-left: 670px;
+		padding: 1em;
+		height: 550px;
+		color: #454745;
+	}
+
+	#cjsText {
+		background-image: url(/assets/rightColumnGradient.jpg); 
+		background-repeat: no-repeat; 
+		width: 350px;
+		height: 450px;
+	}
+ 	
+	#textItem {
+		background-image: url(/assets/textBackground.gif); 
+		background-repeat: no-repeat; 
+		height: 100px;
+		width: 300px;
+		margin: 0 auto;
+		padding: 5px;
+	}
+	
+	#createText {
+		font-size: 40px;
+		/*color: #5B8357;*/
+		color: #495084;
+	}
+
+	#joinText {
+		font-size: 40px;
+		/*color: #364E34;*/
+		color: #495084;
+	}
+
+	#searchText {
+		font-size: 40px;
+		/*color: #243322;*/
+		color: #495084;
+	}
+
+	#checkItOutButton {
+		height: 45px;
+		margin-right: 10px;
+		margin-top: 10px;
+		float: right;
+		padding: 0px 5px;
+		/*background: #1A4915;*/
+		background: #495084;
+		color: #FFFFFF;
+	}
+/* start right column */
+/* end new look */
+</style>
+
+</head><body>
+<div id="wrapper">
+<%= render 'layouts/logo' %>
+<hr />
+<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
+<div id="page">
+<!-- ********* START NEW STUFF ********* -->
+<!-- ** start left colum ** -->
+<div id="leftColumn">
+	<div id = "dslImage"><%= image_tag "/assets/Home-LS1.gif", :alt => "What we are about", :size => "650x360" %></div>
+	<div id = "dslText"><%= image_tag "/assets/Home-LS2.gif", :alt => "What makes us different", :size => "540x170" %></div>
+</div>
+<!-- ** end left colum ** -->
+<!-- ** start right colum ** -->
+<div id="rightColumn">
+<div id="cjsText">
+<br />
+<div id="textItem"><div id="createText">Create</div>Start Pods to accomplish your goals with others who compliment you.
+</div><!-- end #textItem -->
+<div id="textItem"><div id="joinText">Join</div>Request or accept invitations from others who are intested in you.
+</div><!-- end #textItem -->
+<div id="textItem"><div id="searchText">Search</div>Find Pods by searching based on strengths to find the perfect partners, mentors, or friends.
+</div><!-- end #textItem -->
+<input id="checkItOutButton" value="Check it out the demo" type="button" />
+</div><!-- end #cjsText -->
+</div><!-- end #rightColumn -->
+<!-- ** end right colum ** -->
+<!-- *********** END NEW STUFF *********** -->
+<%= render 'layouts/footer' %>
+</div><!-- end #page -->
+</body></html>

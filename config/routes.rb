@@ -1,6 +1,6 @@
 Levelset::Application.routes.draw do
 	
-	root :to => 'pages#template'
+	root :to => 'pages#home'
 
 	resources :sessions
 		match '/login', :to => 'sessions#new'	
@@ -45,6 +45,9 @@ Levelset::Application.routes.draw do
 
 	#this is the showMyPods_url for viewing of the user's pods
 	match 'showMyPods' => 'users#showmypods'
+
+	#this is the home_url for home view
+	match 'home' => 'pages#home'
 
 	# The priority is based upon order of creation:
   # first created -> highest priority.
