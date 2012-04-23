@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+-->
+  
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Level Set</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<style type="text/css" media="screen">
+	
+	/* Content */
+
+	/* start left column */
+	#leftColumn {
+		float: left;
+		width: 450px;
+		margin: 0;
+		padding: 1em;
+		/* border-right:3px inset #055606; */
+	}
+/* end left column */
+/* start right column */
+	#rightColumn {
+		margin-left: 500px;
+		padding: 1em;
+		height: 400px;
+		color: #454745;
+	}
+
+	#leftColTopText {
+		height: 100px;
+		background-image: url(/assets/wawTextBackground1.gif); 
+		background-repeat: no-repeat;
+		background-position: 40%;
+		color: #495084;
+		font-size: 1.6em;	
+	}
+
+	#wawGraphic {
+		padding-top: 35px;
+		padding-left: 75px;
+	}
+
+	#rightColTopTextArea {
+		color: #1A4915;
+		font-size: 1.35em;
+		background-image: url(/assets/wawTextBackground2.gif); 
+		background-repeat: no-repeat;
+		background-position: 20% 50%;
+	}
+
+	#rightColTopText {
+		padding: 5px;
+	}
+
+	#rightColUlList ul li {
+		color: #495084;
+		line-height: 1.1em;
+		padding: 5px;
+		font-size: .9em;
+	}
+
+	#bottomText {
+		height: 100px;
+		background-image: url(/assets/wawTextBackground1.gif); 
+		background-repeat: no-repeat;
+		background-position: center;
+		color: #1A4915;
+		font-size: 1.3em;
+		margin-bottom: 15px;
+	}
+
+	/*end content*/
+
+</style>
+
+</head><body>
+<div id="wrapper">
+<%= render 'layouts/logo' %>
+<hr />
+<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
+<div id="page">
+
+<!-- ********* Content ********* -->
+
+<!-- start top content-->
+<div id="pageContent">
+<!-- start left column -->
+<div id="leftColumn">
+	<div id="leftColTopText">Level Set is a community of people who believe that individuals and teams achieve more in every way when relationships are created on complementary strengths.</div>
+	<div id="wawGraphic">
+		<%= image_tag "/assets/wawGraphic.gif", :alt => "Who are we?" %>
+	</div>
+</div>
+<!-- end left column -->
+<!-- start right column -->
+<div id="rightColumn">
+	<div id="rightColTopTextArea">
+		<div id="rightColTopText">If we do our job and people believe this leads to better outcomes, the implications are staggering.</div>
+		<div id="rightColTopText">In a world Where teams are optimized based on strengths it changes everything.</div>
+		<div id="rightColUlList">
+			<ul>
+				<li>How we look at potential employers; and how we evaluate ourselves</li>
+				<li>How we identify ourselves to our friends, family, and peers; and how they relate to us</li>
+				<li>How we compete in the 21st century; and how empowered that makes us feel</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end right column -->
+<div id="bottomText"><br />We believe this is a better way to approach all types of personal and organizational growth. It all starts when an
+individual identifies their unique strengths, shares that information with people who may benefit from their talents, 
+and takes advantages of opportunities to meet new people, join new pods, and create new businesses.</div>
+</div><!-- end #pageContent -->
+
+<!-- *********** END Content *********** -->
+	
+<%= render 'layouts/footer' %>
+</div><!-- end #page -->
+</body></html>

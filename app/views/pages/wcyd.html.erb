@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+-->
+  
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Level Set</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<style type="text/css" media="screen">
+	
+	/* Content */
+
+	#topArea {
+		margin-bottom: 45px;
+	}
+
+	#topLeftText {
+		color: #495084;
+		font-size: 1.35em;
+	}
+
+	#topRightText {
+		color: #495084;
+		font-size: 1.35em;
+		float: right;
+		color: #1A4915;
+	}
+
+/* start left column */
+	#leftColumn {
+		float: left;
+		width: 500px;
+		margin: 0;
+		padding: 1em;
+	}
+/* end left column */
+/* start right column */
+	#rightColumn {
+		margin-left: 575px;
+		padding: 1em;
+		/* height: 415px; */
+		color: #454745;
+	}
+/* end right column */
+
+	#cjsText {
+		background-image: url(/assets/rightColumnGradientWcyd.jpg); 
+		background-repeat: no-repeat; 
+		width: 550px;
+		height: 450px;
+	}
+ 	
+	#textItem {
+		background-image: url(/assets/textWcydBkgrnd.gif); 
+		background-repeat: no-repeat; 
+		height: 100px;
+		width: 550px;
+		margin: 0 auto;
+		padding: 5px;
+	}
+
+	#checkItOutButton {
+		height: 45px;
+		margin-right: 35px;
+		margin-top: 10px;
+		float: right;
+		padding: 0px 5px;
+		/*background: #1A4915;*/
+		background: #495084;
+		color: #FFFFFF;
+	}
+
+	#createText {
+		font-size: 40px;
+		float: left;
+		padding-top:20px;
+		/*color: #5B8357;*/
+		color: #495084;
+	}
+
+	#joinText {
+		font-size: 40px;
+		float: left;
+		padding-top:20px;
+		/*color: #364E34;*/
+		color: #495084;
+	}
+
+	#searchText {
+		font-size: 40px;
+		/*color: #243322;*/
+		float: left;
+		padding-top:20px;
+		color: #495084;
+	}
+
+	#cjsListText {
+		margin-top: 10px;
+		margin-left: 125px;
+		font-size: 1.2em;
+	}
+
+	#cjsListText ul li {
+		line-height: 1.2em;
+		padding-top: 5px;
+		color: #1A4915;
+	}
+
+	#adsComingSoon {
+		border-style: dashed;
+		border-color: #1A4915;
+		color: #495084;
+		padding: 35px;
+		font-size: 1.75em;
+	}
+
+	/*end content*/
+
+</style>
+
+</head><body>
+<div id="wrapper">
+<%= render 'layouts/logo' %>
+<hr />
+<%= render 'layouts/menu' %>
+</div><!-- end #wrapper -->
+<div id="page">
+
+<!-- ********* Content ********* -->
+<!-- start top content-->
+<div id="topArea">
+	<div>
+		<%= image_tag "/assets/wcydTop.gif", :alt => "What can you do?" %>
+	</div>
+	<div id="topLeftText">Everyone works best in groups based on complimentary strengths, common goals, and valuable skills.</div>
+	<div id="topLeftText">Whether the purpose of your Pod is to learn from others with the same strengths as you, or to start a new business-</div>
+	<div id="topRightText">Level Set will help you meet the right people to get started.</div>
+</div>
+<!-- ** start left colum ** -->
+<div id="leftColumn">
+<div id="cjsText">
+<br />
+<div id="textItem">
+	<div id="createText">Create</div>
+	<div id="cjsListText">
+		<ul>
+			<li>Find a partner to open a new pizzaria</li>
+			<li>Break ground on a community garden</li>
+			<li>Start an economics study group in your dorm</li>
+		</ul>
+	</div><!-- end #cjsTextList -->
+</div><!-- end #textItem -->
+<div id="textItem"><div id="joinText">Join</div>
+	<div id="cjsListText">
+		<ul>
+			<li>Look for opportunities with an old co-worker</li>
+			<li>Team up with a local runners club to train</li>
+			<li>Accept an invite and make a new friend</li>
+		</ul>
+	</div><!-- end #cjsTextList -->
+</div><!-- end #textItem -->
+<div id="textItem"><div id="searchText">Search</div>
+	<div id="cjsListText">
+		<ul>
+			<li>Find a mentor who shares your strengths</li>
+			<li>Discover new people who share your goals</li>
+			<li>Seek out Pods that need your skills</li>
+		</ul>
+	</div><!-- end #cjsTextList -->
+
+</div><!-- end #textItem -->
+<%= button_to('Check out the demo', signup_url, :id => "checkItOutButton" )%>
+</div><!-- end #cjsText -->
+</div>
+<!-- ** end left colum ** -->
+<!-- ** start right colum ** -->
+<div id="rightColumn">
+	<div id="adsComingSoon">
+		<div>Soon, you will also be able to  market your Pod by placing ads</div>
+		<br />
+		<div>Here at Level Set, we want to make sure that the ads that we show are as relevant as possible. And what is more relevant than the Pods that are being started by your fellow users?</div>
+	</div>
+<br />
+</div>
+<!-- ** end right colum ** -->
+<!-- *********** END Content *********** -->
+	
+<%= render 'layouts/footer' %>
+</div><!-- end #page -->
+</body></html>
