@@ -1,7 +1,6 @@
 Levelset::Application.routes.draw do
 	
-	#root :to => 'pages#home'
-	root :to => 'pages#way'
+	root :to => 'pages#home'
 
 	resources :sessions
 		match '/login', :to => 'sessions#new'	
