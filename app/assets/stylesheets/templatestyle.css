@@ -146,6 +146,18 @@ td#buttonRow{
 	text-decoration: none; 
 }
 
+/* for the demo */
+body#home a#home, 
+body#waw a#waw,
+body#wdwd a#wdwd,
+body#wcyd a#wcyd,
+body#way a#way {
+	color: #495084;
+	font-size: 1.1em;
+}
+
+/* end for the demo */
+
 #menu .current_page_item a {
 }
 
