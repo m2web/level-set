@@ -229,7 +229,6 @@ body#way a#way {
 /** LOGO */
 
 	#logo {
-		width: 800px;
 		height: 115px;
 		margin-left: 175px;
 	} 	
@@ -247,9 +246,11 @@ body#way a#way {
 	}
 
 	#logoPhrase {
-		margin-left: 50px;	
+		float: right;
 		font-size: 20px;
-		vertical-align:text-bottom;
+		padding-top: 50px;
+		padding-right: 80px;
+		color: #618C04;
 	}
 
 /* END LOGO */
