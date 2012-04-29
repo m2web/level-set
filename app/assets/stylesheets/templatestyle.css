@@ -147,6 +147,8 @@ td#buttonRow{
 }
 
 /* for the demo */
+
+/* nav menu highlight on selection */
 body#home a#home, 
 body#waw a#waw,
 body#wdwd a#wdwd,
@@ -154,6 +156,7 @@ body#wcyd a#wcyd,
 body#way a#way {
 	color: #495084;
 }
+/* end nav menu highlight on selection */
 
 /* end for the demo */
 
