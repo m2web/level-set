@@ -66,13 +66,12 @@ Released for free under a Creative Commons Attribution 2.5 License
 
 	#checkItOutButton {
 		height: 45px;
-		margin-right: 10px;
 		margin-top: 10px;
 		float: right;
 		padding: 0px 5px;
-		/*background: #1A4915;*/
+		/*background: #1A4915;
 		background: #495084;
-		color: #FFFFFF;
+		color: #FFFFFF; */
 	}
 /* start right column */
 /* end new look */
@@ -102,7 +101,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 </div><!-- end #textItem -->
 <div id="textItem"><div id="searchText">Search</div>Find Pods by searching based on strengths to find the perfect partners, mentors, or friends.
 </div><!-- end #textItem -->
-<%= button_to('Check out the demo', signup_url, :id => "checkItOutButton" )%>
+<%= link_to( image_tag('/assets/checkOutOurDemo.gif', :size => "200x80"), signup_url, { :id => "checkItOutButton", :alt => "Check out our demo!"} ) %>
 </div><!-- end #cjsText -->
 </div><!-- end #rightColumn -->
 <!-- ** end right colum ** -->
