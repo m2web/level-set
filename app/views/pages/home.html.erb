@@ -46,22 +46,23 @@ Released for free under a Creative Commons Attribution 2.5 License
 		padding: 5px;
 	}
 	
-	#createText {
+	#cjsLargeText {
 		font-size: 40px;
 		/*color: #5B8357;*/
-		color: #495084;
-	}
-
-	#joinText {
-		font-size: 40px;
 		/*color: #364E34;*/
-		color: #495084;
-	}
-
-	#searchText {
-		font-size: 40px;
 		/*color: #243322;*/
 		color: #495084;
+	}
+
+	#cjsHeaderText {
+		color: #1A4915;
+		font-size: 1.22em;
+		margin-left: 15px;
+		width: 100%;
+	}
+	
+	#cjsDetailText {
+		color: #1A4915;
 	}
 
 	#checkItOutButton {
@@ -93,13 +94,14 @@ Released for free under a Creative Commons Attribution 2.5 License
 <!-- ** end left colum ** -->
 <!-- ** start right colum ** -->
 <div id="rightColumn">
+<div id="cjsHeaderText">The Level Set Podiverse allows people to</div>
 <div id="cjsText">
-<br />
-<div id="textItem"><div id="createText">Create</div>Start Pods to accomplish your goals with others who compliment you.
+	<br />
+<div id="textItem"><div id="cjsLargeText">Create</div><div id="cjsDetailText">Start Pods to accomplish your goals with others who compliment you.</div>
 </div><!-- end #textItem -->
-<div id="textItem"><div id="joinText">Join</div>Request or accept invitations from others who are intested in you.
+<div id="textItem"><div id="cjsLargeText">Join</div><div id="cjsDetailText">Request or accept invitations from others who are intested in you.</div>
 </div><!-- end #textItem -->
-<div id="textItem"><div id="searchText">Search</div>Find Pods by searching based on strengths to find the perfect partners, mentors, or friends.
+<div id="textItem"><div id="cjsLargeText">Search</div><div id="cjsDetailText">Find Pods by searching based on strengths to find the perfect partners, mentors, or friends.</div>
 </div><!-- end #textItem -->
 <%= link_to( image_tag('/assets/checkOutOurDemo.gif', :size => "200x80"), signup_url, { :id => "checkItOutButton", :alt => "Check out our demo!"} ) %>
 </div><!-- end #cjsText -->
