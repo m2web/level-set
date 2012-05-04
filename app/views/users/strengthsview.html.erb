@@ -1,13 +1,5 @@
 <style type="text/css" media="screen">
-	#thisPage {
-  	background-color: #f0f0f0;
-    width: 450px;
-    margin-top: 100px;
-    margin-left: auto;
-		margin-right: auto;
-		padding: 25px;
-	}
-
+	
 	#firstStrengthText{
 		font-size: 3.5em;
 		color: #618C04;
@@ -32,11 +24,39 @@
 		font-size: 1.5em;
 		color: #618C04;
 	}
+	
+	#thisPage {
+    width:960px;
+    margin:0 auto;
+	}
+
+	#tipLeft {
+    float:left;
+		width:190px;
+		margin-top:25px;
+	}
+	
+	#contentMiddleRightContainer {
+		margin-top: 100px;
+		margin-left: 195px;
+    width:750px;
+	}
+	
+	#strengthsSection {
+    float:left;
+    width:440px;
+    background-color: #f0f0f0;
+	}
+	
+	#tipRight {
+		margin-left: 445px;
+		width:310px;
+		padding-top: 50px;
+	}
 
 	#nextButton {
-		width: 450px;
-		position:absolute;
-		right:0px;
+		float: right;
+		padding-right: 10px;
 	}
 
 </style>
@@ -45,19 +65,23 @@
 <hr />
 <%= render 'layouts/menu' %>
 </div><!-- end #wrapper -->
-
 <div id="thisPage">
-	<h2>We have your strengths ready to review</h2>
-	<h3>You will see the full descriptions on your profile page</h3>
-	<br />
-	<div id="firstStrengthText">Ideator</div>
-	<div id="secondStrengthText">Adaptability</div>
-	<div id="thirdStrengthText">Strategic</div>
-	<div id="fourthStrengthText">Connectedness</div>
-	<div id="fifthStrengthText">Empathy</div>
-	<hr>
-<div id="nextButton">
-	<%= button_to('Next', bitMoreInfo_url )%>
-</div><!-- end #buttonRow -->
+<div id="tipLeft"><%= image_tag "/assets/strengthsLeftTip.gif", :alt => "Tip #1" %></div>
+<div id="contentMiddleRightContainer">
+	<div id="strengthsSection">
+		<h2>We have your strengths ready to review</h2>
+		<h3>You will see the full descriptions on your profile page</h3>
+		<br />
+		<div id="firstStrengthText">Ideator</div>
+		<div id="secondStrengthText">Adaptability</div>
+		<div id="thirdStrengthText">Strategic</div>
+		<div id="fourthStrengthText">Connectedness</div>
+		<div id="fifthStrengthText">Empathy</div>
+		<div id="nextButton">
+			<%= button_to('Next', bitMoreInfo_url )%>
+		</div><!-- end #buttonRow -->
+	</div><!-- end #strengthsSection -->
+	<div id="tipRight"><%= image_tag "/assets/strengthsRightTip.gif", :alt => "Tip #2" %></div>
+</div><!-- end #contentMiddleRightContainer -->
 </div><!-- end #thisPage -->
 <%= render 'layouts/footer' %>
