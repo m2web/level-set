@@ -1,20 +1,32 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
   
-  <style type="text/css" media="screen">
-#thisPage {
-       	background-color: #f0f0f0;
-        width: 700px;
-        margin-top: 100px;
-        margin-left: auto;
-				margin-right: auto;
-				padding: 25px;
-			}
+	<style type="text/css" media="screen">
+
+		#contentArea {
+			margin: 0 auto;
+			width:960px;
+		}
+
+		#matchesTip {
+			float: left;
+			width: 310px;
+			margin-top: 45px;
 			
-.matchName {
-	font-weight: bold;
-	font-size:1.5em;
-}
+		}	
+		
+		#matchSection {
+			background-color: #f0f0f0;
+			width: 500px;
+			margin-top: 100px;
+			margin-left: 315px;
+			padding: 25px;
+		}
+		
+		.matchName {
+			font-weight: bold;
+			font-size:1.5em;
+		}
 
   </style>
 	</head><body>
@@ -23,34 +35,36 @@
 		<hr />
 		<%= render 'layouts/menu' %>
 	</div><!-- end #wrapper -->
+<div id="contentArea">
+	<div id="matchesTip"><%= image_tag "/assets/matchesTip.gif", :alt => "Your matches tip." %></div>	
+	<div id="matchSection">
+	<h2>We have some matches</h2>
+	<h3>These folks have strengths that compliment yours</h3>
 
-<div id="thisPage">
-<h2>We have some matches</h2>
-<h3>These folks have strengths that compliment yours</h3>
-
-<table style="width: 100%; height: 203px;">
-  <tbody>
-    <tr>
-			<td style="vertical-align: top;"><span class="matchName">Linda Jones</span><br /> <%= gravatar_image_tag 'lori@automattic.com' %>
-      </td>
-			<td style="vertical-align: top;"><span class="matchName">Jim Williams</span><br /> <%= gravatar_image_tag 'isaac@automattic.com' %>
-      </td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-    <tr>
-			<td style="vertical-align: top;"><span class="matchName">Daryll Lynn</span><br /> <%= gravatar_image_tag 'ercoli@gmail.com' %>
-      </td>
-			<td style="vertical-align: top;"><span class="matchName">Mike Sylvester</span><br /> <%= gravatar_image_tag 'batmoo@gmail.com' %>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="buttonRow"><%= button_to('Finish', showProfile_url )%></td>
-    </tr>
-  </tbody>
-</table>
-</div>
+	<table style="width: 100%; height: 203px;">
+  	<tbody>
+    	<tr>
+				<td style="vertical-align: top;"><span class="matchName">Linda Jones</span><br /> <%= gravatar_image_tag 'lori@automattic.com' %>
+      	</td>
+				<td style="vertical-align: top;"><span class="matchName">Jim Williams</span><br /> <%= gravatar_image_tag 'isaac@automattic.com' %>
+      	</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+  	  <tr>
+				<td style="vertical-align: top;"><span class="matchName">Daryll Lynn</span><br /> <%= gravatar_image_tag 'ercoli@gmail.com' %>
+    	  </td>
+				<td style="vertical-align: top;"><span class="matchName">Mike Sylvester</span><br /> <%= gravatar_image_tag 'batmoo@gmail.com' %>
+	      </td>
+  	  </tr>
+    	<tr>
+      	<td colspan="2" id="buttonRow"><%= button_to('Finish', showProfile_url )%></td>
+	    </tr>
+  	</tbody>
+	</table>
+	</div><!-- end #matchSection -->
+</div><!-- end #contentArea -->
 <%= render 'layouts/footer' %>
 </body></html>

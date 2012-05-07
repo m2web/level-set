@@ -1,12 +1,22 @@
 <style type="text/css" media="screen">
-	#thisPage {
+
+	#contentArea {
+		margin: 0 auto;
+		width:960px;
+	}
+
+	#profileSection {
+		float: left;
 		background-color: #f0f0f0;
-		width: 900px;
-		margin-top: 100px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 25px;
-		overflow: hidden;
+		width: 725px;
+		margin-left: 15px;
+		padding: 10px;
+		margin-top: -125px;
+	}
+
+	#profileTip {
+		margin-left: 800px;
+		margin-top: 225px;
 	}
 
 	.largerText {
@@ -16,20 +26,20 @@
 
 	#aboutMe {
 		float: left;
-		width: 350px;
+		width: 325px;
 		margin: 0;
 		padding: 1em;
 	}
 
 	#podsNpeople {
-		margin-left: 475px;
+		margin-left: 380px;
 		padding: 1em;
 	}
 
 	#recentActivity {
 		border: 1px solid black;
 		padding: 10px;
-		width: 400px;
+		width: 325px;
 	}
 
 	#activity { 
@@ -89,8 +99,8 @@ end user pic and links
 	<hr />
 	<%= render 'layouts/menu' %>
 </div><!-- end #wrapper -->
-
-<div id="thisPage">
+<div id="contentArea">
+<div id="profileSection">
 	<div id="aboutMe">
 		<H2><%=@user.first_name%> <%=@user.last_name%> is a member since 2012.</h2>
 		<br />
@@ -117,7 +127,7 @@ end user pic and links
 	</div><!--end #aboutMe -->
 	<div id="podsNpeople">
 		<H3>Explore Pods that could use Your Strengths</h3>
-		<%= image_tag "/assets/pods.jpg", :size => "400x300", :alt => "Pods" %>
+		<%= image_tag "/assets/pods2.jpg", :size => "325x200", :alt => "Pods" %>
 		<br />
 		<br />
 		<H3>These people could benefit from your strengths</h3>
@@ -125,7 +135,8 @@ end user pic and links
 			<%= image_tag "/assets/VerticlePhotos.jpg", :size => "125x500", :alt => "People" %>
 		</div><!-- end #peopleMayneedYou -->
 	</div><!-- end #podsNpeople -->
-</div><!-- end #thisPage -->
-
+</div><!-- end #profilesSection -->
+<div id="profileTip"><%= image_tag "/assets/alphaProfileTip.gif", :alt => "Your profile tip." %></div>
+</div><!-- end #contentArea -->
 <%= render 'layouts/footer' %>
 </body></html>
