@@ -1,4 +1,10 @@
 <style type="text/css" media="screen">
+	
+	#thisPage {
+		width:960px;
+		margin:0 auto;
+	}
+
 	#questionArea {
 		float: left;
     background-color: #f0f0f0;
@@ -13,8 +19,7 @@
 		padding-top: 110px;
 	}
 
-	#questionLine{
-	}
+	#questionLine{}
 
 	#rightQuestion{
 		float: left;
@@ -37,6 +42,7 @@
 <%= render 'layouts/menu' %>
 </div><!-- end #wrapper -->
 <% if session[:qAndA][session[:questionNumber]] %>
+<div id="thisPage">
 <div id="questionArea">
 <h3><%= session[:qAndA][session[:questionNumber]][1] %></h3>
 <br />
@@ -54,7 +60,8 @@
 </div><!-- end #questionArea -->
 <div id="questionGif">
 	<%= image_tag session[:qAndA][session[:questionNumber]][4], :alt => "Question Instructions", :size => "295x95" %>
-</div>
+</div><!-- end #questionGif -->
+</div><!-- end #thePage -->
 <% else %>
 	<h3>There was a problem with the test. Please try again later.</h3>
 <% end %>
