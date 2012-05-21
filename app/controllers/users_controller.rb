@@ -151,7 +151,6 @@ class UsersController < ApplicationController
 				render "testquestion"
 			else
 				session[:questionNumber] = 0
-				session[:qAndA] = nil
 				render "strengthsview"
 			end
 		else
