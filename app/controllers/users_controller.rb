@@ -150,7 +150,9 @@ class UsersController < ApplicationController
 				#redirect_to testQuestion_url
 				render "testquestion"
 			else
-				session[:questionNumber] = 0
+				#commented this as users will use the back button during the demo
+				#session[:questionNumber] = 0
+				#session[:qAndA] = nil
 				render "strengthsview"
 			end
 		else
