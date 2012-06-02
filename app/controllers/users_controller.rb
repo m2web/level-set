@@ -119,7 +119,7 @@ class UsersController < ApplicationController
 			session[:questionNumber] = 1
 			session[:qAndA] = { 
 				1 => ["problem_first_impulse", "When you are confronted with a problem is your first impulse more likely:", "handle the problem immediately", "imagine what the best outcome would be", "/assets/Q1.gif"], 
-				2 => ["first_action", "If your first action of the day could be anything you would like, you would often choose:", "having a quite breakfast alone","getting dressed for a brunch out with friends", "/assets/Q2.gif"],
+				2 => ["first_action", "If your first action of the day could be anything you would like, you would often choose:", "having a quiet breakfast alone","getting dressed for a brunch out with friends", "/assets/Q2.gif"],
 				3 => ["influenced_by", "Your next vehicle purchase is more likely to be influenced by:", "the amount of money you have", "an expression of your personality", "/assets/Q3.gif"],
 				4 => ["help_friend", "The best way to help a friend get over a bad day at work is:", "helping them forget their troubles", "encouraging them to share their feelings", "/assets/Q4.gif"]
 			}
