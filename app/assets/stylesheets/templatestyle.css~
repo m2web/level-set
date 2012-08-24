@@ -111,7 +111,7 @@ td#buttonRow{
 	float: left;
 	width: 425px;
 	height: 43px;
-	background: url(/assets/img02.gif) no-repeat left top;
+	background: url(/assets/img02.jpg) no-repeat left top;
 }
 
 #menu ul {
