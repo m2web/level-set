@@ -74,6 +74,28 @@ Released for free under a Creative Commons Attribution 2.5 License
 		background: #495084;
 		color: #FFFFFF; */
 	}
+
+/* start sample employer report */
+	#serLink {
+		font-size: 24px;
+		padding: 0px 5px;
+	}
+	
+	#serLink a {
+		background-color: #1A4915;
+		color: #FFFFFF;
+		text-decoration:none;
+		display : block;
+		text-align : center;
+		width: 345px;
+	}
+	
+	#serLink a:hover {
+		/*text-decoration:underline;
+		font-weight: bold;*/
+	}
+/* end sample employer report */
+	
 /* start right column */
 /* end new look */
 </style>
@@ -103,8 +125,9 @@ Released for free under a Creative Commons Attribution 2.5 License
 </div><!-- end #textItem -->
 <div id="textItem"><div id="cjsLargeText">Search</div><div id="cjsDetailText">Find Pods by searching based on strengths to find the perfect partners, mentors, or friends.</div>
 </div><!-- end #textItem -->
-<%= link_to( image_tag('/assets/checkOutOurDemo.gif', :size => "200x80"), signup_url, { :id => "checkItOutButton", :alt => "Check out our demo!"} ) %>
-</div><!-- end #cjsText -->
+<%= link_to( image_tag('/assets/checkOutOurDemo.gif', :size => "200x80"), signup_url, { :id => "checkItOutButton", :alt => "Check out our demo!"} ) %></div>
+<!-- end #cjsText -->
+<div id="serLink"><%= link_to 'Sample Employer Report', ser_url, :id => "ser" %></div>
 </div><!-- end #rightColumn -->
 <!-- ** end right colum ** -->
 <!-- *********** END NEW STUFF *********** -->

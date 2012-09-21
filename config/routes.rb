@@ -63,6 +63,9 @@ Levelset::Application.routes.draw do
 	#this is the who are you url
 	match 'way' => 'pages#way'
 
+	#sample employer report
+	match 'ser' => 'pages#ser'
+
 	# The priority is based upon order of creation:
   # first created -> highest priority.
 
