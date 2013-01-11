@@ -1,0 +1,16 @@
+== Welcome to the Level-Set Code Repository
+
+http://levelset.herokuapp.com/assets/levelsetLogoSmall.jpg
+
+This is the repo for the soon to come Level-Set demo. 
+
+=== Here is the plan to date.
+
+1. Mark needs to figure out what is going on
+   * This will be a continual review of the existing Level-Set models, etc.
+
+2. Get started on a prototype that can be set in front of investors: http://levelset.herokuapp.com
+   * This will be produced in an iterative, agile fashion.
+
+3. Morph the prototype into an actual, functioning application
+   * This again will be done in an iterative methodology either by Mark but more than likely a team to decrease time to market.
