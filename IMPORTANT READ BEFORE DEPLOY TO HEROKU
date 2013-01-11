@@ -1,0 +1,2 @@
+Remember to run the: bundle exec rake assets:precompile
+to precompile the assets before a deploy to Heroku
