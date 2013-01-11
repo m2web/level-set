@@ -1,19 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-#the sqlite3 gem will need to be enabled and
-#config.assets.compile = true in the config/environments/production.rb file
-#for:
-#rake assets:precompile --trace RAILS_ENV=production
-##**********************
-#NOTE: Make sure you change the above back and run bundle install
-#before push to heroku
-#**********************
-#gem 'sqlite3'
+gem 'rails', '3.2.0.rc2'
 
 #these get rid of the execjs error upon server startup
 gem 'execjs'
@@ -53,17 +40,3 @@ group :production do
   gem "pg"
 end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
