@@ -18,18 +18,14 @@ end
 
 gem 'jquery-rails'
 
-group :development do
-	#gem 'sqlite3'
+group :development doS
 	gem "pg"
 	gem 'rspec-rails'
 	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 
 group :test do
-  # Pretty printed test output
-  #gem 'turn', '0.8.2', :require => false
-	#gem 'sqlite3'
-	gem "pg"
+  	gem "pg"
 	gem 'rspec'
 	gem 'webrat'
 	gem "factory_girl_rails", "~> 1.6.0"
