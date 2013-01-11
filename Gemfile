@@ -18,7 +18,7 @@ end
 
 gem 'jquery-rails'
 
-group :development doS
+group :development do
 	gem "pg"
 	gem 'rspec-rails'
 	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
